@@ -4,4 +4,12 @@ node_js:
 install:
   - npm install --no-optional && npm install @deskpro/apps-dpat@0.9.1
 script:
- - npm run test && npm run package
+  - npm run package
+deploy:
+  provider: releases
+  api_key:
+    secure: f9S/n3gZqfx/vut5ptJURbgfeh8D53jKCEvDZv6W3vPDiAvHjrNB26ahkHcSfoXrYI13Tol5Uk8rXxIQfs+W1QlWanFsmvwqII7IYi5HLFxLXflg8Wi0rb8GlZdI9UbIQeKCh51YWKZkBVVVmivymbpHfAyMcJe7IN2d3VfHXp0BeJq7rr6sKd5XW4G5laYjQH+pRDFyN1leYjfKmGFvwhWobLhx6rrEetHOsxQZjgmYFbmKpd2ETS5r1aF/+ff9cuuSgezgc54PDbA0il/37jK50v3dvamI7eM7gp1Z5M298Pfig+GDsr7lOIxvKj/WbOE9Ad8cBjatIeIfLi8i/xkoh0ekPLifS4QBSAXO39l58BaZEXsU7yIcL1h50muMMV1WOKg1aPp/Y+2VPrttO2ZRbdVrFCaOnmA9rFAaabC3jRUiFOyLA/YtOPIR8BtK9ZVYJCQ8SaeelZGOMVLejrYMlLpqtwggg1i7M7BrTtYQSpYWm4fW4zY7YP1y0eOFzRzlXQGYtCfuYW+Uy4u3giUwHoZtiQC3ShlosbUS1eusbcGogyKzqq3/eZ6VJDpvWgK5Re7su5hUjtaeUwucyHNGQud6A5JX08F8l+QJeoBQhC5z+M1uWD0WbECQASOmLYLxavX38/vY1YobzT0TRuZ/17PteqI5dPybb3vZ7xE=
+  file: dist/app.zip
+  skip_cleanup: true
+  on:
+    tags: true
