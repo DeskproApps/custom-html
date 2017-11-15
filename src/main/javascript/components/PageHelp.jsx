@@ -20,7 +20,8 @@ const PageHelp = () => (
         Template
       </Heading>
       <p>
-        The tab data is displayed using an admin created template which may
+        The <a href="https://deskpro.gitbooks.io/deskpro-apps/apps/tabdata.html" target="_blank">tab data</a> is
+        displayed using an admin created template which may
         contain <a href="http://handlebarsjs.com/expressions.html" target="_blank">Handlebars expressions</a>.
       </p>
       <pre>
