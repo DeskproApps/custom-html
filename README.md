@@ -1,6 +1,8 @@
 # Custom HTML
 Renders the opened tab values using a custom template.
 
+[![Build Status](https://travis-ci.org/DeskproApps/custom-html.svg?branch=master)](https://travis-ci.org/DeskproApps/custom-html)
+
 ## Contents
 - [Installation](#installation)
 - [Development](#development)
