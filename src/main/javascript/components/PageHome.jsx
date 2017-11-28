@@ -36,8 +36,12 @@ class PageHome extends React.PureComponent {
   constructor(props) {
     super(props);
     try {
-      const template = Handlebars.compile(props.storage.app.settings.template || '');
-      this.html = template(props.tabData);
+      if (!props.storage.app.settings || !props.storage.app.settings.template) {
+        props.route.to('settings');
+      } else {
+        const template = Handlebars.compile(props.storage.app.settings.template || '');
+        this.html      = template(props.tabData);
+      }
     } catch (error) {
       props.ui.error(error);
       props.route.to('settings');
