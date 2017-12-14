@@ -54,7 +54,7 @@ class PageSettings extends React.PureComponent {
 
     return (
       <Container>
-        <Heading size={2}>Settings</Heading>
+        <Heading size={3}>Settings</Heading>
         <Form
           name="settings"
           initialValues={storage.app.settings}
