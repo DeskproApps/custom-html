@@ -7,7 +7,7 @@ import { Container, Section, Heading } from '@deskpro/react-components';
  */
 const PageHelp = () => (
   <Container>
-    <Heading size={2}>
+    <Heading size={3}>
       Help
     </Heading>
     <Section>
@@ -16,7 +16,7 @@ const PageHelp = () => (
         a custom HTML template.
       </p>
 
-      <Heading size={3}>
+      <Heading size={4}>
         Template
       </Heading>
       <p>
