@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import tabOverride from 'taboverride';
 import { sdkConnect, LinkButton } from '@deskpro/apps-sdk-react';
 import { Container, Heading } from '@deskpro/react-components';
-import { Form, Textarea, Button } from '@deskpro/react-components/lib/bindings/redux-form';
+import { Form, Input, Textarea, Button } from '@deskpro/react-components/lib/bindings/redux-form';
 
 /**
  * Renders the app's settings page.
@@ -42,7 +42,8 @@ class PageSettings extends React.PureComponent {
   /**
    * Called when the form is submitted
    */
-  handleSubmit = () => {
+  handleSubmit = (values) => {
+    document.querySelector('.deskpro-toolbar__title').innerHTML = values.title;
     this.props.route.to('home');
   };
 
@@ -50,7 +51,14 @@ class PageSettings extends React.PureComponent {
    * @returns {XML}
    */
   render() {
-    const { storage } = this.props;
+    const { storage, dpapp } = this.props;
+
+    if (storage.app.settings === undefined) {
+      storage.app.settings = {};
+    }
+    if (!storage.app.settings.title) {
+      storage.app.settings.title = dpapp.manifest.title;
+    }
 
     return (
       <Container>
@@ -62,6 +70,11 @@ class PageSettings extends React.PureComponent {
           initialValues={storage.app.settings}
           onSubmit={storage.onSubmitApp(this.handleSubmit)}
         >
+          <Input
+            label="Title"
+            id="title"
+            name="title"
+          />
           <Textarea
             label="Template"
             id="template"
