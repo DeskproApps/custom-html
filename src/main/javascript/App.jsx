@@ -37,10 +37,11 @@ export default class App extends React.PureComponent {
     const { dpapp, storage, route, me } = this.props;
 
     const title = document.querySelector('.deskpro-toolbar__title');
-    if (storage.app.settings === undefined) {
-      storage.app.settings = {};
+    if (storage.app.settings && storage.app.settings.title) {
+      title.innerHTML = storage.app.settings.title;
+    } else {
+      title.innerHTML = dpapp.manifest.title;
     }
-    title.innerHTML = storage.app.settings.title || dpapp.manifest.title;
 
     route.on('to', this.handleRouteTo);
 
