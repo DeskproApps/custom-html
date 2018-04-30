@@ -1,6 +1,6 @@
 {
   "name": "@deskproapps/custom-html",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Renders the opened tab values using a custom template.",
   "main": "lib/main/javascript/index.js",
   "scripts": {
