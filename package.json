@@ -1,11 +1,11 @@
 {
   "name": "@deskproapps/custom-html",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Renders the opened tab values using a custom template.",
   "main": "lib/main/javascript/index.js",
   "scripts": {
     "dev": "dpat server .",
-    "package": "dpat clean . && dpat compile . && dpat verify ./dist && dpat package .",
+    "package": "dpat clean . && dpat compile . && dpat bundle-installer . && dpat verify ./dist && dpat package .",
     "test": "dpat test .",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/deskproapps/custom-html",
   "deskpro": {
-    "version": "2.1.0",
-    "title": "Custom HTML",
+    "version": "2.3.0",
+    "title": "Custom Html",
     "isSingle": true,
     "scope": "agent",
     "storage": [
@@ -47,7 +47,22 @@
         "url": "html/index.html"
       }
     ],
-    "settings": [],
+    "settings": [
+      {
+        "name": "title",
+        "defaultValue": "",
+        "title": "The title displayed in the toolbar",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "name": "html",
+        "defaultValue": "",
+        "title": "The HTML rendered into the document",
+        "required": true,
+        "type": "textarea"
+      }
+    ],
     "deskproApiTags": [],
     "externalApis": []
   },
@@ -62,9 +77,9 @@
     "taboverride": "^4.0.3"
   },
   "devDependencies": {
-    "@deskpro/apps-dpat": "^0.10.0",
-    "@deskpro/apps-sdk-core": "^1.0.0-beta.28",
-    "@deskpro/apps-sdk-react": "0.2.12",
+    "@deskpro/apps-dpat": "0.10.5",
+    "@deskpro/apps-installer": "github:deskpro/apps-installer#v0.4.5",
+    "@deskpro/apps-sdk-react": "^0.2.13",
     "babel-eslint": "^8.0.2",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
