@@ -4,6 +4,15 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
+### Added
+
+    - admin settings screen for configuration
+
+### Changed
+
+    - previous variables are now available via `tab.<variable-name>` syntax
+    - `me` object with information about the current authenticated agent is available in the template 
+
 ## [0.2.4][] - 2018-04-05
 
 ### Changed
