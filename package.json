@@ -31,7 +31,7 @@
   "deskpro": {
     "version": "2.3.0",
     "title": "Custom Html",
-    "isSingle": false,
+    "isSingle": true,
     "scope": "agent",
     "storage": [
       {
