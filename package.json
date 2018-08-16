@@ -12,12 +12,14 @@
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
+    "changelog-verify": "^1.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "handlebars": "^4.0.11",
     "history": "^4.7.2",
     "react-router": "^4.3.1",
-    "react-test-renderer": "^16.4.2"
+    "react-test-renderer": "^16.4.2",
+    "version-changelog": "^3.1.0"
   },
   "homepage": ".",
   "scripts": {
@@ -27,7 +29,8 @@
     "eject": "react-scripts eject",
     "lint": "react-scripts eslint src test",
     "format": "react-scripts prettier --write \"{src,test}/**/*.js\"",
-    "format:check": "react-scripts prettier --list-different \"{src,test}/**/*.js\""
+    "format:check": "react-scripts prettier --list-different \"{src,test}/**/*.js\"",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "description": "Renders the opened tab values using a custom template.",
   "author": {
