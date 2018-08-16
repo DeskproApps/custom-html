@@ -4,6 +4,12 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
+### Changed
+
+ - using the new apps structure and sdks
+ - use @deskpro/apps-sdk@0.5.0
+ - use @deskpro/apps-components@0.5.0
+
 ## [0.2.5][] - 2018-04-30
 
 ### Added

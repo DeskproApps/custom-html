@@ -2,6 +2,9 @@
 
 Allows admins to render details of the opened tab using a custom HTML template.
 
+[![Build Status](https://travis-ci.org/DeskproApps/custom-html.svg?branch=master)](https://travis-ci.org/DeskproApps/custom-html)
+
+
 ## How it works
 
 Edit the HTML template to set the value which gets rendered in the document.
@@ -13,8 +16,9 @@ For example, this template:
 
 ```
 <div>
-  Ticket by {{tab.person.emails.[0].email}}
+  Ticket by {{tab.person.emails.[0]}}
 </div>`
 ```    
 
 would render the email of the person who opened the ticket.
+
