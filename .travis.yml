@@ -13,13 +13,13 @@ cache:
   directories:
     - node_modules
 after_success:
-  - if [ ! -z "$UPLOAD_ARTIFACT" ] ; then artifacts upload --target-paths /${TRAVIS_REPO_SLUG}/${TRAVIS_BUILD_NUMBER}/NODE-${TRAVIS_NODE_VERSION} dist/app.zip ; fi
+  - if [ ! -z "$UPLOAD_ARTIFACT" ] ; then artifacts upload --target-paths /${TRAVIS_REPO_SLUG}/${TRAVIS_BUILD_NUMBER}/NODE-${TRAVIS_NODE_VERSION} build/app.zip ; fi
   - if [ ! -z "$UPLOAD_ARTIFACT" ] && [ ! -z "$TRAVIS_PULL_REQUEST_SLUG" ] ; then echo "commenting on PRs is disabled ( npm run dpat -- travis pr-comment . --s3target /${TRAVIS_REPO_SLUG}/${TRAVIS_BUILD_NUMBER}/NODE-${TRAVIS_NODE_VERSION} )" ; fi
 deploy:
   skip_cleanup: true
   provider: releases
   api_key:
     secure: bk2AhKWBQ0s/CoI/EKXEX2Z72l8FBb1tamnILE95hmTnBlJVot9YnMlSJCij+i9vpGzxV6JvxMgQ2aJflfO6kWzfd2NlRSRSeJKOWUEjrNb1n0fDAGU0W6v9h5XBd25V+enWzMjTg207RL1SVvP0JXJLeL9Z/oM4xqZKt9U5CVyelPPVK8RAFSsnDK+5Qj7S7GqE7ztIyTnubxV/Zdnfpot/o+KqMVDhsPBHxPpVwZK6PfRcJvLfjsaUgqV7/LkwOM48Km+9p11FiAEVVRmzY/G3QylDdULoZSYVtUtJ538FQz5QApE/OZGRyjnBxkFZLtXbOFIgR9US+V+QJPMKDgX0Hd44h/r4SPcd/xVGmMzoLOlcy/C4E0HFzEJaCVpfMRWkqAA/9pEs9OoWjbswVFYBxkGLopm2UbhV245nRIFAoIKaderaI798tfsnbbuW6ul8E78TPlwm5FCVsVDQV3IWhNxArxNnX89hKr5TYLPICfTOto2/L7QcVheAhteMdxWxKgQdMrFlEcR89nPsnmDu9xX1VDrsRrUYBXfFLkZwUWoxoZexXf0qgvhazRkw+ez7BuuXVC5BeKEGBI6oqvK1M0Ypr8yl+1QpA2NhhdRkWA+JkOYRLqkYKbj+IMeh/PXCSyyAzEuTsabzyhFcFkpmqcIS0LpD17DO6aqY7zo=
-  file: dist/app.zip
+  file: build/app.zip
   on:
     tags: true
