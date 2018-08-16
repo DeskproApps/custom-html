@@ -7,7 +7,7 @@ install:
   - NODE_ENV=dev yarn install
   - if [ ! -z "$UPLOAD_ARTIFACT" ]; then curl -sL https://raw.githubusercontent.com/travis-ci/artifacts/master/install | bash; fi
 script:
-  - yarn test && yarn build
+  - yarn test && CI=false yarn build
 cache:
   yarn: true
   directories:
