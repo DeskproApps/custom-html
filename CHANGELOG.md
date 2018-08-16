@@ -4,6 +4,8 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
+## [0.2.6][] - 2018-08-16
+
 ### Changed
 
  - using the new apps structure and sdks
@@ -34,7 +36,8 @@ This project is following [Semantic Versioning](http://semver.org)
     - travis will attach builds to Github PR's when enabled via s3 environment variables
 
 
-[Unreleased]: https://github.com/DeskproApps/custom-html/compare/v0.2.5...HEAD
+[Unreleased]: https://github.com/DeskproApps/custom-html/compare/v0.2.6...HEAD
+[0.2.6]: https://github.com/DeskproApps/custom-html/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/DeskproApps/custom-html/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/DeskproApps/custom-html/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/DeskproApps/custom-html/tree/v0.2.3
