@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { sdkConnect } from '@deskpro/apps-sdk-react';
-import { Section } from '@deskpro/react-components';
+import { Content } from '@deskpro/apps-components';
 
 /**
  * Renders the app's settings page.
@@ -27,11 +26,11 @@ class PageSettings extends React.PureComponent {
   render() {
 
     return (
-      <Section>
+      <Content>
         It appears the application did not install properly. Please contact your administrator.
-      </Section>
+      </Content>
     );
   }
 }
 
-export default sdkConnect(PageSettings);
+export default PageSettings;

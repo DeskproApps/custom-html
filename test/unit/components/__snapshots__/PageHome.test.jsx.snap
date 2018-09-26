@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHome renders correctly in the normal state 1`] = `
+<div
+  className="dp-Content"
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "  Ticket by joe.kool@deskpro.com
+      ",
+      }
+    }
+  />
+</div>
+`;
