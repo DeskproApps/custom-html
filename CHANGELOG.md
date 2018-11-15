@@ -4,6 +4,15 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
+## [0.3.0][] - 2018-11-15
+
+### Changed
+
+ - use @deskpro/apps-sdk@0.11.0
+ - use @deskpro/apps-components@0.11.0
+ - use @deskpro/apps-installer@1.0.8
+ - use @deskpro/apps-react-scripts@0.4.0
+
 ## [0.2.6][] - 2018-08-16
 
 ### Changed
