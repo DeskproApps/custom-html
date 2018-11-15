@@ -60,7 +60,7 @@ export default class App extends React.PureComponent {
         <Switch>
           <Route path="settings" component={PageSettings} />
           <Route path="home" render={this.renderHome} />
-          <Route path={"loading"} render={() => <Loader />} />
+          <Route path="loading" render={() => <Loader />} />
         </Switch>
       </Router>
     );
