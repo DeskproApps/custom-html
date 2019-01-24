@@ -4,14 +4,14 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
-## [0.3.0][] - 2018-11-15
+## [0.3.0][] - 2018-11-23
 
 ### Changed
 
  - use @deskpro/apps-sdk@0.11.0
  - use @deskpro/apps-components@0.11.0
  - use @deskpro/apps-installer@1.0.8
- - use @deskpro/apps-react-scripts@0.4.0
+ - use @deskpro/apps-react-scripts@0.5.0
 
 ## [0.2.6][] - 2018-08-16
 
@@ -45,7 +45,8 @@ This project is following [Semantic Versioning](http://semver.org)
     - travis will attach builds to Github PR's when enabled via s3 environment variables
 
 
-[Unreleased]: https://github.com/DeskproApps/custom-html/compare/v0.2.6...HEAD
+[Unreleased]: https://github.com/DeskproApps/custom-html/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/DeskproApps/custom-html/compare/v0.2.6...v0.3.0
 [0.2.6]: https://github.com/DeskproApps/custom-html/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/DeskproApps/custom-html/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/DeskproApps/custom-html/compare/v0.2.3...v0.2.4
