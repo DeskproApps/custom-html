@@ -17,7 +17,7 @@ For example, this template:
 ```
 <div>
   Ticket by {{tab.person.emails.[0]}}
-</div>`
+</div>
 ```    
 
 would render the email of the person who opened the ticket.
